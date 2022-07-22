@@ -1,0 +1,33 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.22.0",
+    "eslint": "^8.15.0",
+    "eslint-config-acme": "*",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "dependencies": {
+    "@react-aria/button": "^3.5.1",
+    "@react-aria/focus": "^3.6.1",
+    "@react-aria/overlays": "^3.9.1",
+    "@react-aria/utils": "^3.13.1",
+    "@react-types/button": "^3.5.1",
+    "@stitches/react": "^1.2.8"
+  }
+}

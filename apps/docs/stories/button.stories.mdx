@@ -1,0 +1,66 @@
+import { Button } from "@acme/core/src";
+import { Meta, Story, Preview, Props } from "@storybook/addon-docs/blocks";
+
+<Meta title="Components/Button" argTypes={{
+  color: {
+    name: 'color', 
+    description: 'Change the color', 
+    options: ['primary', 'default','error'],
+    },
+  disabled: {
+    name: 'disabled',
+    description: 'Whether button is disabled',
+    default: false,
+    options: [true, false]
+  }
+    }} 
+    component={Button} />
+
+# Button
+
+Buttons allow users to perform actions and choose with a single tap.
+
+## Props
+
+<Props of={Button} />
+
+## Examples
+<Preview>
+  <Story name="Default">
+    <Button>Default</Button>
+  </Story>
+  <Story name="Primary">
+    <Button color="primary">Primary</Button>
+  </Story>
+    <Story name="Primary/disabled">
+    <Button color="primary" disabled>Primary</Button>
+  </Story>
+  <Story name="Secondary">
+    <Button color="secondary">Secondary</Button>
+  </Story>
+  <Story name="Success">
+    <Button color="success">Success</Button>
+  </Story>
+    <Story name="Error">
+    <Button color="error">Error</Button>
+  </Story>
+  <Story name="Sizes">
+    <div style={{display: 'flex', gap: '10px'}}>
+      <Button color="primary" size="xs">Extra Small</Button>
+      <Button color="primary" size="sm">Small</Button>
+      <Button color="primary" size="md">Medium</Button>
+      <Button color="primary" size="lg">Large</Button>
+      <Button color="primary" size="xl">Extra Large</Button>
+    </div>
+  </Story>
+    <Story name="Fullwidth button">
+    <div style={{display: 'flex', gap: '10px'}}>
+      <Button color="primary" fullWidth>Fullwidth</Button>
+    </div>
+  </Story>
+      <Story name="Childless button">
+    <div style={{display: 'flex', gap: '10px'}}>
+      <Button color="primary" fullWidth />
+    </div>
+  </Story>
+</Preview>
